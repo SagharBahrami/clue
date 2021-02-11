@@ -57,7 +57,7 @@ public class RandomClue {
         Random random = new Random();
 
         // INPUT
-        System.out.print("Which theory would like you like to test? (1, 2, 3[random]): ");
+        System.out.print("Which theory would like you like to test Saghar? (1, 2, 3[random]): ");
         answerSet = keyboard.nextInt();
         keyboard.close();
 

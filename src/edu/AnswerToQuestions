@@ -1,0 +1,8 @@
+-RandomClue:
+How often do you get a solution in fewer than 20 guesses?  Out of 10 checks I didn't get any solution in fewer than 20 guesses
+Does this change depending on the theory you test (1, 2, 3)? No
+ What is good or bad about this strategy? It is short code! but it takes time to check even for 1000 times which is not efficient.
+ -DemoClue:
+ How often do you get a solution in fewer than 20 guesses?  Out of 10 checks I got  10 solution in fewer than 20 guesses
+ Does this change depending on the theory you test (1, 2, 3)? No it works for all of the theories
+  What is good or bad about this strategy? it checks for at most 20 times and it gets the solution which is good. But it needs an efficient code which is longer than the other one!
