@@ -3,59 +3,42 @@ package edu.miracosta.cs113;
 import model.AssistantJack;
 import model.Theory;
 
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class DemoClue {
+public class DemoClueWithoutRandomizing {
     public static void main(String[] args) {
-
-        int answerSet, solution, murder, weapon, location;
-        ArrayList<Integer> wrongWeapon = new ArrayList<>();
-        ArrayList<Integer> wrongMurder = new ArrayList<>();
-        ArrayList<Integer> wrongLocation = new ArrayList<>();
-
+        // DECLARATION + INITIALIZATION
+        int answerSet, solution, murder = 1, weapon = 1, location = 1;
         Theory answer;
         AssistantJack jack;
         Scanner keyboard = new Scanner(System.in);
         Random random = new Random();
 
         // INPUT
-        System.out.print("Which theory would you like to test? (1, 2, 3[random]): ");
+        System.out.print("Which theory would like you like to test Saghar? (1, 2, 3[random]): ");
         answerSet = keyboard.nextInt();
         keyboard.close();
 
         // PROCESSING
         jack = new AssistantJack(answerSet);
 
-
         do {
-
-            do{
-                weapon = random.nextInt(6) + 1;
-
-            }while(wrongWeapon.contains(weapon));
-            do{
-                location = random.nextInt(10) + 1;
-            }while(wrongLocation.contains(location));
-            do {
-                murder = random.nextInt(6) + 1;
-            }while(wrongMurder.contains(murder));
-
 
             solution = jack.checkAnswer(weapon, location, murder);
             if(solution == 1)
             {
-                wrongWeapon.add(weapon);
-
+              weapon++;
             }
             else if(solution == 2)
             {
-                wrongLocation.add(location);
+                location++;
+
             }
             else if(solution == 3)
             {
-                wrongMurder.add(murder);
+                murder++;
+
             }
         } while (solution != 0);
 
